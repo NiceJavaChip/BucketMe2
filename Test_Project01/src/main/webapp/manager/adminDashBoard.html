@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/managerCss/style.css" />
+    <title>BuketMe 관리자 Dash Board</title>
+</head>
+<body>
+    <div class="title-bar">
+        <div class="title-bar__column">
+            <a class="logo" href="#"><img src="../img/Logo.png"></a>
+        </div>
+        <div class="title-bar__column">
+            <div class="searchBox">
+                <input class="searchText" type="text" placeholder="search">
+                <a class="searchBtn" href="#">
+                <span class="userTitleIcon color">
+                    <i class="fas fa-search fa-lg">
+                    </i>
+                </span>
+                </a>
+            </div>
+            <span class="userTitleIcon"><img src="../img/man.png" class="userProfileImage"></span>
+            <span class="userTitleIcon">
+                <div class="dropDownBox">
+                  <button class="dropDownbtn">
+                    <i class="fas fa-caret-down fa-lg" id="downIcon"></i>
+                  </button>
+                  <div class="dropDownContent">
+                    <a href="#"><img src="../img/man.png" class="userProfileImageSub"> 홍길동</a>
+                    <a href="#">프로필 관리</a>
+                    <a href="#">마이페이지</a>
+                    <a href="#">고객센터</a>
+                    <a href="#">로그아웃</a>
+                  </div>
+                </div>
+            </span>
+        </div>
+    </div>
+    <div class="mainBox">
+        <div class="sideBox">
+            <div class="toDoListBox">
+                <h3 class="toDoListTitle">TO DO LIST</h3>
+                <div id="todoList">
+                </div>
+                <div id="completedList" class="completedList">
+                </div>
+                <div class="insetToDoListBox">
+                    <button type="button" id="plusList" class="plusList">+</button>
+                    <input id="insertText" class="insertText" placeholder="toDoList">
+                </div>
+            </div>
+            <div class="navigationBar">
+                <ul class="navMenu">
+                    <li class="Menu"><a class="MenuLink" href="#">대시 보드</a></li>
+                    <li class="Menu"><a class="MenuLink" href="#">콘텐츠 관리</a></li>
+                    <li class="Menu">
+                        <a class="MenuLink" href="#">
+                            <span class="notificationPoint"></span>
+                            Q&A
+                        </a>
+                    </li>
+                    <li class="Menu"><a class="MenuLink" href="#">회원관리</a></li>
+                    <li class="Menu"><a class="MenuLink" href="#">관리기록</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mainBoxInside">
+            <div class="contentsUpLoadSpace">
+                <div class="contentsUpLoadBox">
+                    <div class="contentsUpLoadBoxIcon">
+                        <i class="fas fa-film fa-9x"></i>
+                    </div>
+                    <form action="contentsUpLoad.html">
+                        <button class="contentsUpLoadBoxBtn">콘텐츠 업로드 하기</button>
+                    </form>
+                </div>
+            </div>
+            <div class="loginStatusBox">
+                <h2>now</h2>
+                <div>
+                    <div class="userComponent">
+                        <div class="userComponentColumn">
+                            <img src="../img/man.png" class="userComponentImage" />
+                            <div class="userComponentText">
+                                <h4 class="userComponentName">Jun</h4>
+                                <h6 class="userComponentStatus">
+                                   Jun is currently logging in
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+
+    </script>
+    <script src="../js/managerJS/toDoList.js"></script>
+    <script
+            src="https://kit.fontawesome.com/6478f529f2.js"
+            crossorigin="anonymous">
+    </script>
+</body>
+</html>

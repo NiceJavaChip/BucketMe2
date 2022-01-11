@@ -1,0 +1,80 @@
+.sideBox {
+    width: 255px;
+    height: 850px;
+    background-color: rgb(26, 29, 41);
+    margin-right: 0px;
+}
+
+.toDoListBox {
+    width: 205px;
+    height: 400px;
+    color: #ffffff;
+    padding: 10px 20px 10px 20px;
+}
+
+.navMenu {
+    margin-top: 0px;
+    padding-top: 50px;
+    height: 300px;
+    color: #ffffff;
+    list-style-type: none;
+}
+
+.Menu {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.Menu a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.MenuLink {
+    text-decoration: none;
+}
+
+.MenuLink:link {
+    color: #ffffff;
+}
+
+.MenuLink:visited {
+    color: #ffffff;
+}
+
+.Menu:nth-child(3) > .MenuLink{
+    position: relative;
+}
+
+.notificationPoint {
+    width: 5px;
+    height: 5px;
+    border-radius: 2.5px;
+    background-color: tomato;
+    position: absolute;
+    top: 5px;
+    left: 48px;
+}
+
+.completedList {
+    border-top: 1px solid #ffffff;
+    margin-right: 5px;
+}
+
+.plusList {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.insertText {
+    background-color: transparent;
+    border-bottom: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.insetToDoListBox {
+    margin-top: 5px;
+}

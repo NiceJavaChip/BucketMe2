@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="../css/managerCss/boardList.css"/>
+	<style>
+		ul {
+				background-color: rgb(26, 29, 41);
+				width: 150px;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				border: solid 1px black;
+		}
+		li { border-bottom: solid 1px black; }
+		li:last-child { border-bottom: none; }
+		li a {
+				display: block;
+
+				padding: 8px;
+				text-align: center;
+				text-decoration: none;
+				font-weight: bold;
+		}
+		li a.current {
+				background-color: #CD853F;
+				color: white;
+		}
+		li a:hover:not(.current) {
+				background-color: #f1592a;
+				color: white;
+		}
+	</style>
+</head>
+<body>
+<div class="all">
+	<div class="ver-line"></div>
+	<div class="header">
+    	<a href="#" class="logo-area">
+        	<span class="logo-icon">
+            	BuketMe
+        	</span>
+    	</a>
+	</div>
+    
+    <div class="container">
+        <h2>Q&A</h2>
+        <table class="board_list">
+            <colgroup>
+                <col width="5%"/>
+                <col width="15%"/>
+                <col width="*"/>
+                <col width="5%"/>
+                <col width="15%"/>
+                <col width="5%"/>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">
+                    	<div class="searchBox">작성자
+                			<input class="searchText" type="text" placeholder="검색">
+                			<a class="searchBtn" href="#">
+                			<span class="userTitleIcon color">
+                    			<i class="fas fa-search fa-lg">
+                    			</i>
+                			</span>
+                			</a>
+                		</div>
+                    </th>
+                    <th scope="col">
+                    <select id="browsers" name="browsers">
+    					<option value="분류" disabled selected>분류</option>
+    					<option value="통합">통합</option>
+    					<option value="결제">결제</option>
+    					<option value="오류">오류</option>
+    					<option value="로그인">로그인</option>
+					</select>
+                    </th>
+                    <th scope="col">문의날짜</th>
+                    <th scope="col">상태</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:if="${#lists.size(list)} > 0" th:each="list : ${list}">
+                    <td th:text="${list.boardIdx}"></td>
+                    <td class="title" th:text="${list.title}"></td>
+                    <td th:text="${#temporals.format(list.createdDatetime, 
+                        'yyyy-MM-dd HH:mm::ss')}"></td>
+                </tr> 
+                <tr th:unless="${#lists.size(list)} > 0">
+                    <td colspan="4">조회된 결과가 없습니다.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+	<div class="nav"> 	
+       	<ul>
+       		<li><a href="">대시보드</a></li>
+       		<li><a href="">콘텐츠 관리</a></li>
+       		<li><a href="">Q&A</a></li>
+      		<li><a href="">회원관리</a></li>
+       		<li><a href="">관리기록</a></li>
+        </ul>
+    </div>
+	<div id="paging">
+	<br/>
+	<a [##_prev_page_##] class="prev" title="이전페이지">◀ 이전 </a>
+	<s_paging_rep><a [##_paging_rep_link_##] class="num">[##_paging_rep_link_num_##]</a></s_paging_rep>
+	<a [##_next_page_##] class="prev" title="다음페이지">다음 ▶</a>
+	<br/>&nbsp;
+	</div>
+</div>
+</body>
+</html>

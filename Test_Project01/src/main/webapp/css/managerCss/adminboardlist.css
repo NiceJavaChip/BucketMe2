@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+/* 
+   - 배경색 : #041c32
+   - 로고색 : #EDAE47
+   - 버튼색 : #ff6768
+
+ */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;		/* 밑줄 제거 */
+	color: inherit;				/* 색상 제거 */
+}
+
+
+
+.board_list_wrap {
+	
+}
+
+.board_search {
+	height: 30px;
+	margin: 20px;
+}
+
+.board_search .filter {
+	float: left;
+    width: 5%;
+    text-align: center;
+}
+
+.board_search .list_title {
+	float: left;
+    text-align: center;
+    width: 80%;
+    font-size: 30px;
+}
+
+.board_search .search {
+    width: 0%;
+    float: left;
+}
+
+.board_search .search > input {
+	height: 30px;
+}
+.board_list_head,				/* board_list_head > div, board_list_body .item > div 의 부모 영역 css */
+.board_list_body .item {
+	font-size: 0;
+	padding: 10px 0;
+}
+
+.board_list_head {
+	border-top: solid 3px #041c32;
+	border-bottom: solid 1px #ccc;
+}
+
+.board_list_body .item {
+	border-bottom: solid 1px #ccc;
+	height: 40px;
+}
+
+.board_list_head > div,			/* board_list_head 안에 있는 div */
+.board_list_body .item > div {		
+	display: inline-block;		/* 나란히 정렬 */		
+	font-size: 14px;
+	text-align: center;			/* 가운데 정렬 */
+}
+
+.board_list_head > div {
+	font-weight: 600;
+}
+
+.board_list .checkbox {
+	width: 7%;
+}
+
+.board_list .contents {
+	width: 40%;
+}
+
+.board_list_contentsimg {
+	height: 25px;
+	padding-right: 30px;
+}
+
+.board_list_body div.contents {
+	text-align: left;
+}
+
+.board_list_body .contents a:hover {	/* a태그위에 마우스 hover했을 때 밑줄 */
+	text-decoration: underline;
+}
+
+.board_list .public {
+	width: 14%;
+}
+
+.board_list .date {
+	width: 14%;
+}
+
+.board_list .view {
+	width: 10%;
+}
+
+/* paging */
+.paging {
+	margin-right: 110px;
+	margin-top: 30px;
+	text-align: center;
+}
+
+.paging a {
+	display: inline-block;
+	vertical-align: middle;
+	
+}
+
+.paging a.bt {
+	width: 30px;
+	height: 30px;
+	background: #ff6768;
+	background-image: url(../img/page_btn.png);
+	background-repeat: no-repeat;
+	border-radius: 100px;
+	text-indent: -1000px;		/* 필요없는 글자 밀어버리기~ */
+	overflow: hidden;			/* 영역 밖으로 넘어간애들 화면에 나오지 않게 하기 */
+}
+
+.paging a.bt:hover {
+	background-color: #ffa1a1;
+}
+
+/* 버튼, 숫자 사이 간격 조절 */
+.paging a.first {
+	background-position: 10px -40px;
+}
+
+.paging a.prev {
+	margin-right: 5px;
+	background-position: 10px 10px;
+}
+
+.paging a.next {
+	margin-left: 5px;
+	background-position: -40px 10px;
+}
+
+.paging a.last {
+	background-position: -40px -40px;
+}
+
+.paging a.num {
+	margin: 0 5px;
+}
+
+.paging a.num.on {
+	color: green;
+	
+}
+.paging a.num:hover {
+	text-decoration: underline;
+}
